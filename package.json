@@ -1,0 +1,10 @@
+{
+  "name": "birthday-ayaa",
+  "version": "1.0.0",
+  "description": "Website Selamat Ulang Tahun untuk Ayaa dari Afaa",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve ."
+  }
+}
