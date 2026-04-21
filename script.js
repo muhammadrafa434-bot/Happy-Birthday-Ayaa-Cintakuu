@@ -282,11 +282,12 @@ function startConfetti() {
 }
 
 // ============================================
-// MUSIC
+// MUSIC - Local MP3
 // ============================================
 function toggleMusic() {
   const audio = document.getElementById('bg-music');
   const btn = document.getElementById('music-btn');
+  const label = document.getElementById('music-label');
 
   if (!audio) return;
 
@@ -295,14 +296,16 @@ function toggleMusic() {
     musicPlaying = false;
     btn.classList.add('paused');
     btn.title = 'Putar musik';
+    if (label) label.style.opacity = '0.4';
   } else {
-    audio.volume = 0.35;
+    audio.volume = 0.4;
     audio.play().catch(() => {
-      console.log('Autoplay blocked. User interaction required.');
+      console.log('Autoplay blocked. Click to play.');
     });
     musicPlaying = true;
     btn.classList.remove('paused');
     btn.title = 'Pause musik';
+    if (label) label.style.opacity = '1';
   }
 }
 
